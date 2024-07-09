@@ -142,6 +142,7 @@ public sealed class PacketHandler : PhotonParser
             HarvestableHandler.Reset();
             MobsHandler.Reset();
             PlayerHandler.Reset();
+            //ChestHandler.Reset();
         }
         catch (Exception e)
         {
