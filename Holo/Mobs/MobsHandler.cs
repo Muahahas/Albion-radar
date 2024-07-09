@@ -22,6 +22,15 @@ public static class MobsHandler
         if (Mobs.TryGetValue(mobId, out Mob mob))
             mob.EnchantmentLevel = enchantmentLevel;
     }
+  
+    public static void UpdateMobsPosition(int id, float posX, float posY)
+    {
+        if (Mobs.TryGetValue(id, out Mob mob))
+        {
+            mob.PosX = posX;
+            mob.PosY = posY;
+        }
+    }
 
     public static void Reset()
     {

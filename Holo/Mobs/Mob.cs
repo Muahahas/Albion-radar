@@ -6,15 +6,15 @@ public sealed class Mob(int id, int typeId, float posX, float posY, int health, 
 {
     public int ID { get; } = id;
     public int TypeId { get; } = typeId;
-    public float PosX { get; } = posX;
-    public float PosY { get; } = posY;
-    public int Health { get; } = health;
+    public float PosX { get; set; } = posX;
+    public float PosY { get; set; } = posY;
+    public int Health { get; set; } = health;
     public byte EnchantmentLevel { get; set; } = enchantmentLevel;
     public MobInfo MobInfo { get; } = MobInfo.GetMobInfo(typeId);
 
     public override string ToString()
     {
-        return "ID:" + ID + " TypeId: " + TypeId + " PosX: " + PosX + " PosY: " + PosY + " Health: " + Health + " Charges: " + EnchantmentLevel;
+        return "ID:" + ID + " TypeId: " + TypeId + " PosX: " + PosX + " PosY: " + PosY + " Health: " + Health + " EnchantmentLevel: " + EnchantmentLevel;
     }
 
     public string getMapStringInfo()
@@ -27,13 +27,13 @@ public sealed class Mob(int id, int typeId, float posX, float posY, int health, 
                 {
                     case HarvestableMobType.ESSENCE:
                         return "E";
-                    case HarvestableMobType.SWAMP:
+                    case HarvestableMobType.FIBER:
                         return "F";
-                    case HarvestableMobType.STEPPE:
+                    case HarvestableMobType.HIDE:
                         return "L";
-                    case HarvestableMobType.MOUNTAIN:
+                    case HarvestableMobType.ORE:
                         return "O";
-                    case HarvestableMobType.FOREST:
+                    case HarvestableMobType.LOGS:
                         return "W";
                     case HarvestableMobType.HIGHLAND:
                         return "R";
@@ -44,7 +44,9 @@ public sealed class Mob(int id, int typeId, float posX, float posY, int health, 
             {
                 return "S";
             }
-            else if (MobInfo.MobType == MobType.OTHER)
+            else if (MobInfo.MobType == MobType.WISP){
+             return "";   
+            }else if (MobInfo.MobType == MobType.OTHER)
             {
                 return "M";
             }

@@ -7,6 +7,8 @@ using PhotonPackageParser;
 using SharpPcap;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing.Printing;
 using System.Threading;
 
 namespace Holo.Networking;
@@ -44,14 +46,15 @@ public sealed class PacketHandler : PhotonParser
             return;
 
         EventCodes eventCode = (EventCodes)codeID;
-
+   
         switch (eventCode)
         {
+
             case EventCodes.Leave:
                 HandleLeave(parameters);
                 break;
             case EventCodes.Move:
-                HandlePlayerMovement(parameters);
+                HandlePlayerMovement(parameters);                
                 break;
             case EventCodes.NewCharacter:
                 HandleNewPlayerEvent(parameters);
@@ -66,7 +69,7 @@ public sealed class PacketHandler : PhotonParser
                 HandleHarvestableChangeState(parameters);
                 break;
             case EventCodes.HarvestFinished:
-                //HandleHarvestFinished(parameters);
+                HandleHarvestFinished(parameters);
                 break;
             case EventCodes.MobChangeState:
                 HandleMobChangeState(parameters);
@@ -77,8 +80,21 @@ public sealed class PacketHandler : PhotonParser
             case EventCodes.JoinFinished:
                 HandleJoinFinished();
                 break;
+            case EventCodes.NewLootChest:
+                HandleNewChest();
+            case EventCodes.NewLootChest:
+                //HandleNewChest();
+                MainForm.Log(eventCode.ToString());
+                break;
+            case EventCodes.NewRandomDungeonExit:
+                MainForm.Log(eventCode.ToString());
+                break;
+            default:
+                //MainForm.Log(eventCode.ToString());
+                break;
         }
     }
+
 
     protected override void OnRequest(byte operationCode, Dictionary<byte, object> parameters)
     {
@@ -303,6 +319,7 @@ public sealed class PacketHandler : PhotonParser
         {
             int id = Convert.ToInt32(parameters[0]);
             PlayerHandler.RemovePlayer(id);
+            MobsHandler.RemoveMob(id);
         }
         catch (Exception e)
         {
@@ -317,6 +334,7 @@ public sealed class PacketHandler : PhotonParser
         float posY = Convert.ToSingle(location[1]);
 
         PlayerHandler.UpdateLocalPlayerPosition(posX, posY);
+
     }
 
     private static void HandlePlayerMovement(Dictionary<byte, object> parameters)
@@ -326,8 +344,11 @@ public sealed class PacketHandler : PhotonParser
             int id = Convert.ToInt32(parameters[0]);
             float posX = Convert.ToSingle(parameters[4]);
             float posY = Convert.ToSingle(parameters[5]);
+            
 
             PlayerHandler.UpdatePlayerPosition(id, posX, posY);
+
+            MobsHandler.UpdateMobsPosition(id, posX, posY);
         }
         catch (Exception e)
         {

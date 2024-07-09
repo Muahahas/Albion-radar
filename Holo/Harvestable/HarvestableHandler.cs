@@ -21,6 +21,10 @@ public static class HarvestableHandler
     {
         if (Harvestables.TryGetValue(id, out Harvestable harvestable))
             harvestable.Size = count;
+        if(count < 1)
+        {
+            RemoveHarvestable(id);
+        }
     }
 
     public static void Reset()

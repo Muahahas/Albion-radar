@@ -5,5 +5,6 @@ public enum MobType
     SKINNABLE,
     HARVESTABLE,
     RESOURCE,
+    WISP,
     OTHER
 }

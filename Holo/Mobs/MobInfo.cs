@@ -8,126 +8,116 @@ public sealed class MobInfo
 {
     public static readonly List<MobInfo> MobsInfo =
     [
-        new(9, 1, MobType.SKINNABLE),
-        new(9, 1, MobType.SKINNABLE),
-        new(16, 1, MobType.SKINNABLE),
-        new(17, 1, MobType.SKINNABLE),
-        new(18, 1, MobType.SKINNABLE),
-        new(19, 1, MobType.SKINNABLE),
-        new(20, 1, MobType.SKINNABLE),
-        new(21, 1, MobType.SKINNABLE),
-        new(22, 1, MobType.SKINNABLE),
-        new(23, 2, MobType.SKINNABLE),
-        new(24, 3, MobType.SKINNABLE),
-        new(25, 4, MobType.SKINNABLE),
-        new(26, 5, MobType.SKINNABLE),
-        new(27, 6, MobType.SKINNABLE),
-        new(28, 7, MobType.SKINNABLE),
-        new(29, 8, MobType.SKINNABLE),
-        new(30, 1, MobType.SKINNABLE),
-        new(31, 2, MobType.SKINNABLE),
-        new(32, 3, MobType.SKINNABLE),
-        new(34, 5, MobType.SKINNABLE),
-        new(36, 1, MobType.SKINNABLE),
-        new(37, 2, MobType.SKINNABLE),
-        new(38, 3, MobType.SKINNABLE),
-        new(41, 6, MobType.SKINNABLE),
-        new(42, 7, MobType.SKINNABLE),
-        new(43, 8, MobType.SKINNABLE),
-        new(44, 1, MobType.SKINNABLE),
-        new(45, 1, MobType.SKINNABLE),
-        new(46, 6, MobType.HARVESTABLE, HarvestableMobType.ESSENCE),
-        new(47, 6, MobType.HARVESTABLE, HarvestableMobType.ESSENCE),
-        new(48, 3, MobType.HARVESTABLE, HarvestableMobType.SWAMP),
-        new(49, 5, MobType.HARVESTABLE, HarvestableMobType.SWAMP),
-        new(50, 7, MobType.HARVESTABLE, HarvestableMobType.SWAMP),
-        new(51, 6, MobType.HARVESTABLE, HarvestableMobType.SWAMP),
-        new(52, 3, MobType.HARVESTABLE, HarvestableMobType.STEPPE),
-        new(53, 5, MobType.HARVESTABLE, HarvestableMobType.STEPPE),
-        new(54, 7, MobType.HARVESTABLE, HarvestableMobType.STEPPE),
-        new(55, 6, MobType.HARVESTABLE, HarvestableMobType.STEPPE),
-        new(56, 3, MobType.HARVESTABLE, HarvestableMobType.MOUNTAIN),
-        new(57, 3, MobType.HARVESTABLE, HarvestableMobType.MOUNTAIN),
-        new(58, 5, MobType.HARVESTABLE, HarvestableMobType.MOUNTAIN),
-        new(59, 5, MobType.HARVESTABLE, HarvestableMobType.MOUNTAIN),
-        new(60, 7, MobType.HARVESTABLE, HarvestableMobType.MOUNTAIN),
-        new(61, 6, MobType.HARVESTABLE, HarvestableMobType.MOUNTAIN),
-        new(62, 3, MobType.HARVESTABLE, HarvestableMobType.FOREST),
-        new(63, 3, MobType.HARVESTABLE, HarvestableMobType.FOREST),
-        new(64, 5, MobType.HARVESTABLE, HarvestableMobType.FOREST),
-        new(65, 5, MobType.HARVESTABLE, HarvestableMobType.FOREST),
-        new(66, 7, MobType.HARVESTABLE, HarvestableMobType.FOREST),
-        new(67, 6, MobType.HARVESTABLE, HarvestableMobType.FOREST),
-        new(68, 3, MobType.HARVESTABLE, HarvestableMobType.HIGHLAND),
-        new(69, 3, MobType.HARVESTABLE, HarvestableMobType.HIGHLAND),
-        new(70, 5, MobType.HARVESTABLE, HarvestableMobType.HIGHLAND),
-        new(71, 5, MobType.HARVESTABLE, HarvestableMobType.HIGHLAND),
-        new(72, 7, MobType.HARVESTABLE, HarvestableMobType.HIGHLAND),
-        new(73, 6, MobType.HARVESTABLE, HarvestableMobType.HIGHLAND),
-        new(74, 6, MobType.HARVESTABLE, HarvestableMobType.HIGHLAND),
-        new(419, 1, MobType.SKINNABLE),
-        new(420, 1, MobType.SKINNABLE),
-        new(75, 2, MobType.RESOURCE),
-        new(76, 3, MobType.RESOURCE),
-        new(77, 4, MobType.RESOURCE),
-        new(78, 5, MobType.RESOURCE),
-        new(79, 6, MobType.RESOURCE),
-        new(80, 7, MobType.RESOURCE),
-        new(81, 8, MobType.RESOURCE),
-        new(82, 4, MobType.RESOURCE),
-        new(83, 4, MobType.RESOURCE),
-        new(84, 4, MobType.RESOURCE),
-        new(85, 4, MobType.RESOURCE),
-        new(86, 4, MobType.RESOURCE),
-        new(87, 5, MobType.RESOURCE),
-        new(88, 5, MobType.RESOURCE),
-        new(89, 5, MobType.RESOURCE),
-        new(90, 5, MobType.RESOURCE),
-        new(91, 5, MobType.RESOURCE),
-        new(92, 6, MobType.RESOURCE),
-        new(93, 6, MobType.RESOURCE),
-        new(94, 6, MobType.RESOURCE),
-        new(95, 6, MobType.RESOURCE),
-        new(96, 6, MobType.RESOURCE),
-        new(97, 7, MobType.RESOURCE),
-        new(98, 7, MobType.RESOURCE),
-        new(99, 7, MobType.RESOURCE),
-        new(100, 7, MobType.RESOURCE),
-        new(101, 7, MobType.RESOURCE),
-        new(102, 8, MobType.RESOURCE),
-        new(103, 8, MobType.RESOURCE),
-        new(104, 8, MobType.RESOURCE),
-        new(105, 8, MobType.RESOURCE),
-        new(106, 8, MobType.RESOURCE),
-        new(107, 2, MobType.RESOURCE),
-        new(108, 3, MobType.RESOURCE),
-        new(109, 4, MobType.RESOURCE),
-        new(110, 5, MobType.RESOURCE),
-        new(111, 6, MobType.RESOURCE),
-        new(112, 7, MobType.RESOURCE),
-        new(113, 8, MobType.RESOURCE),
-        new(114, 2, MobType.RESOURCE),
-        new(115, 3, MobType.RESOURCE),
-        new(116, 4, MobType.RESOURCE),
-        new(117, 5, MobType.RESOURCE),
-        new(118, 6, MobType.RESOURCE),
-        new(119, 7, MobType.RESOURCE),
-        new(120, 8, MobType.RESOURCE),
-        new(121, 2, MobType.RESOURCE),
-        new(122, 3, MobType.RESOURCE),
-        new(123, 4, MobType.RESOURCE),
-        new(124, 5, MobType.RESOURCE),
-        new(125, 6, MobType.RESOURCE),
-        new(126, 2, MobType.RESOURCE),
-        new(127, 3, MobType.RESOURCE),
-        new(128, 4, MobType.RESOURCE),
-        new(129, 5, MobType.RESOURCE),
-        new(130, 6, MobType.RESOURCE),
-        new(131, 2, MobType.RESOURCE),
-        new(132, 3, MobType.RESOURCE),
-        new(133, 4, MobType.RESOURCE),
-        new(134, 5, MobType.RESOURCE),
-        new(135, 6, MobType.RESOURCE)
+	
+		//#region Hide        
+		// Steppe biome
+		new(386, 1, MobType.SKINNABLE), // Marmot
+		new(387, 2, MobType.SKINNABLE), // Impala
+		new(388, 3, MobType.SKINNABLE), // Moabird
+		new(389, 4, MobType.SKINNABLE), // Giant stag
+		new(390, 5, MobType.SKINNABLE), // Terrorbird
+		new(391, 6, MobType.SKINNABLE), // Hyena
+		new(392, 7, MobType.SKINNABLE), // Rhino
+		new(393, 7, MobType.SKINNABLE), // Bighorn Rhino
+		new(394, 8, MobType.SKINNABLE), // Mammoth
+		new(395, 8, MobType.SKINNABLE), // Ancient Mammoth
+		   // Steppe biome treasure
+        new(396, 4, MobType.SKINNABLE), // T4_MOB_TREASURE_HIDE_STEPPE_GIANTSTAG
+        new(397, 5, MobType.SKINNABLE), // T5_MOB_TREASURE_TERRORBIRD
+        new(398, 6, MobType.SKINNABLE), // T6_MOB_TREASURE_DESERTWOLF
+        new(399, 7, MobType.SKINNABLE), // T7_MOB_TREASURE_RHINO
+        new(400, 8, MobType.SKINNABLE), // T8_MOB_TREASURE_ANCIENTMAMMOTH
+
+        new(475, 3, MobType.SKINNABLE), // 
+        new(476, 5, MobType.SKINNABLE), // Cougar
+        new(477, 7, MobType.SKINNABLE), // Cougar
+
+
+         // Mists
+         new(330, 1, MobType.SKINNABLE), // WOLPERTINGER
+         new(331, 2, MobType.SKINNABLE), // FOX
+         new(332, 3, MobType.SKINNABLE), // DEER
+         new(333, 4, MobType.SKINNABLE), // GIANTSTAG
+         new(334, 5, MobType.SKINNABLE), // OWL
+         new(335, 6, MobType.SKINNABLE), // HOUND
+         new(336, 7, MobType.SKINNABLE), // DIREBEAR
+         new(337, 8, MobType.SKINNABLE), // DRAGONHAWK
+
+
+        //Mist Cougars
+         new(492, 3, MobType.SKINNABLE),//??
+         new(493, 4, MobType.SKINNABLE),
+         new(494, 5, MobType.SKINNABLE),
+         new(495, 6, MobType.SKINNABLE),
+         new(496, 7, MobType.SKINNABLE),
+         new(497, 8, MobType.SKINNABLE),
+
+
+        new(364, 6, MobType.SKINNABLE), //wolf ava
+
+        new(508,4,MobType.HARVESTABLE,HarvestableMobType.LOGS),
+        new(509, 5, MobType.HARVESTABLE, HarvestableMobType.LOGS),
+        new(510, 6, MobType.HARVESTABLE, HarvestableMobType.LOGS),
+
+
+        new(568, 3, MobType.HARVESTABLE, HarvestableMobType.LOGS),
+        new(569, 4, MobType.HARVESTABLE, HarvestableMobType.LOGS),
+        new(570, 5, MobType.HARVESTABLE, HarvestableMobType.LOGS),
+        new(571, 6, MobType.HARVESTABLE, HarvestableMobType.LOGS),
+        new(572, 7, MobType.HARVESTABLE, HarvestableMobType.LOGS),
+        new(573, 8, MobType.HARVESTABLE, HarvestableMobType.LOGS),
+
+        //new(594, 5, MobType.HARVESTABLE, HarvestableMobType.LOGS),
+        //new(595, 6, MobType.HARVESTABLE, HarvestableMobType.LOGS),
+
+
+        //new(619, 6, MobType.HARVESTABLE, HarvestableMobType.LOGS),
+
+        new(554, 5, MobType.HARVESTABLE, HarvestableMobType.FIBER),
+        new(555, 6, MobType.HARVESTABLE, HarvestableMobType.FIBER),
+
+        new(560, 6, MobType.HARVESTABLE, HarvestableMobType.FIBER), //ava spect
+
+        new(586, 3, MobType.HARVESTABLE, HarvestableMobType.FIBER),
+        new(587, 4, MobType.HARVESTABLE, HarvestableMobType.FIBER),
+        new(588, 5, MobType.HARVESTABLE, HarvestableMobType.FIBER),
+        new(589, 6, MobType.HARVESTABLE, HarvestableMobType.FIBER),        
+        new(590, 7, MobType.HARVESTABLE, HarvestableMobType.FIBER),
+        new(591, 8, MobType.HARVESTABLE, HarvestableMobType.FIBER),
+
+        new(612, 5, MobType.HARVESTABLE, HarvestableMobType.FIBER),
+        new(613, 6, MobType.HARVESTABLE, HarvestableMobType.FIBER),//no confirmat
+        new(614, 7, MobType.HARVESTABLE, HarvestableMobType.FIBER),
+
+        new(553, 4, MobType.HARVESTABLE, HarvestableMobType.FIBER),
+        new(637, 6, MobType.HARVESTABLE, HarvestableMobType.FIBER),
+
+        new(538, 4, MobType.HARVESTABLE, HarvestableMobType.ORE),
+        new(540, 6, MobType.HARVESTABLE, HarvestableMobType.ORE),
+
+        new(580, 3, MobType.HARVESTABLE, HarvestableMobType.ORE),
+        new(581, 4, MobType.HARVESTABLE, HarvestableMobType.ORE),
+        new(582, 5, MobType.HARVESTABLE, HarvestableMobType.ORE),
+        new(583, 6, MobType.HARVESTABLE, HarvestableMobType.ORE),
+        new(584, 7, MobType.HARVESTABLE, HarvestableMobType.ORE),
+        new(585, 8, MobType.HARVESTABLE, HarvestableMobType.ORE),
+
+        new(607, 7, MobType.HARVESTABLE, HarvestableMobType.ORE),
+        new(608, 7, MobType.HARVESTABLE, HarvestableMobType.ORE),
+
+
+        new(87,0,MobType.WISP),
+        new(88,1,MobType.WISP),
+        new(89,2,MobType.WISP),
+        new(90,3,MobType.WISP),
+        new(91,4,MobType.WISP)
+
+        //new(87,1,MobType.WISP)
+
+
+
+
+
     ];
 
     public int ID { get; }
